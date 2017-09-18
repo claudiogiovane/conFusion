@@ -29,9 +29,9 @@ import { baseURL } from "./shared/baseurl"
         MenuComponent
     ],
     providers: [
-        DishService,
+        { provide: 'BaseURL', useValue: baseURL },
         ProcessHTTPMsgService,
-        { provide: 'BaseURL', useValue: baseURL } 
+        DishService                
     ],
     schemas: [
         NO_ERRORS_SCHEMA
